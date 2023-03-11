@@ -34,8 +34,15 @@ body {
     box-shadow: #d2459a 10px 10px 0 0 ;
 }
 
+.accordion:hover .item_head p,
+.accordion:hover .item_head svg {
+    color: #95caef;
+    stroke: #95caef;
+}
+
 .accord_item {
     position: relative;
+    cursor: pointer;
     /* border: 1px black solid; */
 }
 
@@ -72,9 +79,10 @@ input[type=checkbox]:hover ~ .accord_item_image {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #DE70A5;
     height: 30px;
-    border: 1px #DE70A5 solid;
+    cursor: pointer;
+    background-color: #ed6eba;
+    border: #ed6eba solid 1px;
 }
 
 .item_head p,
@@ -84,7 +92,7 @@ input[type=checkbox]:hover ~ .accord_item_image {
 
 .plusOrCross {
     width: 1.6em;
-    stroke: #f8eef4;
+    stroke: #fff893;
 }
 
 input[type=checkbox]:checked ~ .accord_item_label .plusOrCross,
@@ -104,3 +112,4 @@ h1 {
     letter-spacing: 0.01em;
     color: #d2459a;
 }
+
