@@ -1,12 +1,3 @@
-/* @font-face {
-    font-family: 'VT323';
-    font-style: normal;
-    font-weight: 400;
-    font-display: swap;
-    src: url(https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2isfFJXUdVNF.woff2) format('woff2');
-    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-  } */
-
 @font-face {
     font-family: 'Russo One';
     font-style: normal;
@@ -16,17 +7,35 @@
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* mobile 320x568, tablet 820x1180, desktop 1920×1080 */
+@media screen and (min-width: 320px) {
+    .wrapper {
+        margin: 2% auto;
+        max-width: 90%;
+    }
+}
+
+@media screen and (min-width: 820px) {
+    .wrapper {
+        margin: 3% auto;
+        max-width: 70%;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .wrapper {
+        margin: 5% auto;
+        max-width: 55%;
+    }
+}
+
 body {
-    background-color: #E092BA;
     font-family: 'Russo One', sans-serif;
-    /* background-color: #e5e5f7; */
     background-image: linear-gradient(#eba9cb 1px, transparent 1px), linear-gradient(to right, #e79dc3 1px, #e5e5f7 1px);
     background-size: 20px 20px;
 }
 
 .wrapper {
-    margin: 3% auto;
-    max-width: 810px;
     min-height: max-content;
 }
 
@@ -43,7 +52,6 @@ body {
 .accord_item {
     position: relative;
     cursor: pointer;
-    /* border: 1px black solid; */
 }
 
 .accord_item_input {
