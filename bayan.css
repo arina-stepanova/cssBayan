@@ -1,34 +1,44 @@
-@font-face {
-    font-family: 'Abril Fatface';
+/* @font-face {
+    font-family: 'VT323';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
-    src: url(https://fonts.gstatic.com/s/abrilfatface/v19/zOL64pLDlL1D99S8g8PtiKchq-dmjcDidBc.woff2) format('woff2');
+    src: url(https://fonts.gstatic.com/s/vt323/v17/pxiKyp0ihIEF2isfFJXUdVNF.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  } */
+
+@font-face {
+    font-family: 'Russo One';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/russoone/v14/Z9XUDmZRWg6M1LvRYsHOz8mJvLuL9A.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
 body {
-    background-color: white;
-    color: rgb(65, 6, 32);
-    font-size: 1.1em;
-    letter-spacing: 1px;
-    font-family: Abril Fatface;
+    background-color: #E092BA;
+    font-family: 'Russo One', sans-serif;
+    /* background-color: #e5e5f7; */
+    background-image: linear-gradient(#eba9cb 1px, transparent 1px), linear-gradient(to right, #e79dc3 1px, #e5e5f7 1px);
+    background-size: 20px 20px;
 }
 
 .wrapper {
-    margin: 4% auto;
-    max-width: 800px;
+    margin: 3% auto;
+    max-width: 810px;
+    min-height: max-content;
 }
 
-.accordion:hover {
-    transition: all 0.2s ease;
-    color: rgb(249, 215, 230);
+.accordion {
+    box-shadow: #d2459a 10px 10px 0 0 ;
 }
 
 .accord_item {
     position: relative;
-    /* margin-bottom: 20px; */
+    /* border: 1px black solid; */
 }
+
 .accord_item_input {
     position: absolute;
     top: 0;
@@ -36,34 +46,61 @@ body {
     opacity: 0;
 }
 
-.accord_item_input:checked ~ .accord_item_image{
-    display: block;
-}
-
-/* accord_item_trigger */
-.accord_item_label {
-    display: block;
-    padding: 20px;
-    /* border: 1px solid black; */
-    background-color: rgb(250, 96, 178);
-}
-
-/* .accord_item_label:active {
-    background-color: rgba(65, 6, 32, 0.543);
-    color: rgb(250, 96, 178);
-} */
-
-.accord_item_image {
-    padding: 20px;
-    /* border: 1px solid black; */
-    border-top: none;
-    display: none;
-    background-color: white;
-}
-
 .accord_item_image img {
-    height: 250px;
-    /* align-items: center; */
+    height: 100%;
     display: block;
     margin: 0 auto;
+}
+
+.accord_item_input {
+    display: none;
+}
+
+.accord_item_image {
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.4s ease-in;
+    background-color: rgb(254, 248, 252);
+}
+
+input[type=checkbox]:checked ~ .accord_item_image,
+input[type=checkbox]:hover ~ .accord_item_image {
+    height: 250px;
+}
+
+.item_head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #DE70A5;
+    height: 30px;
+    border: 1px #DE70A5 solid;
+}
+
+.item_head p,
+.item_head svg {
+    padding: 5px;
+}
+
+.plusOrCross {
+    width: 1.6em;
+    stroke: #f8eef4;
+}
+
+input[type=checkbox]:checked ~ .accord_item_label .plusOrCross,
+input[type=checkbox]:hover ~ .accord_item_label .plusOrCross {
+    transform: rotate(45deg);
+}
+
+p {
+    font-size: 1.5em;
+    margin: 0;
+    letter-spacing: 0.05em;
+    color: #fff893;
+}
+
+h1 {
+    font-size: 2em;
+    letter-spacing: 0.01em;
+    color: #d2459a;
 }
