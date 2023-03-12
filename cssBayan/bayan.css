@@ -171,12 +171,12 @@ body {
     transition: transform 0.3s ease;
 }
 
-input[type=checkbox]:checked ~ .accord_item_label .plusOrCross {
+input[type=radio]:checked ~ .accord_item_label .plusOrCross {
     transform: rotate(45deg);
 }
 
-input[type=checkbox]:active ~ .accord_item_label .plusOrCross,
-input[type=checkbox]:active ~ .accord_item_label .item_head p {
+input[type=radio]:active ~ label .item_head .plusOrCross,
+input[type=radio]:active ~ label .item_head p {
     color: #47fe66;
     stroke: #47fe66;
 }
