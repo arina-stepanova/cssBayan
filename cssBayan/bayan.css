@@ -119,6 +119,10 @@ body {
     margin: 0 auto;
 }
 
+.accord_item_image:active img {
+    opacity: 50%;
+}
+
 .accord_item_input {
     display: none;
 }
