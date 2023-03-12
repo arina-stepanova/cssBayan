@@ -115,8 +115,10 @@
 
 body {
     font-family: 'Russo One', sans-serif;
-    background-image: linear-gradient(#eba9cb 1px, transparent 1px), linear-gradient(to right, #e79dc3 1px, #e5e5f7 1px);
-    background-size: 20px 20px;
+    background-image:
+    linear-gradient(#eba9cb 0.05em, transparent 0.05em),
+    linear-gradient(to right, #e79dc3 0.05em, #e5e5f7 0.05em);
+    background-size: 1em 1em;
 }
 
 .wrapper {
@@ -124,7 +126,7 @@ body {
 }
 
 .accordion {
-    box-shadow: #d2459a 10px 10px 0 0 ;
+    box-shadow: #d2459a 1em 1em 0 0 ;
 }
 
 .accord_item {
@@ -158,12 +160,12 @@ body {
     align-items: center;
     cursor: pointer;
     background-color: #ed6eba;
-    border: #ed6eba solid 1px;
+    border: #ed6eba solid 0.01em;
 }
 
 .item_head p,
 .item_head svg {
-    padding: 5px;
+    padding: 0.6em;
 }
 
 .plusOrCross {
@@ -184,12 +186,10 @@ input[type=radio]:active ~ label .item_head p {
 p {
     margin: 0;
     color: #95caef;
-    text-shadow: rgb(0, 0, 0) 1px 2px;
+    text-shadow: 0.1em 0.1em black;
 }
 
 h1 {
     color: #d2459a;
-    text-shadow: rgb(0, 0, 0) 1px 2px;
+    text-shadow: 0.08em 0.08em black;
 }
-
-
