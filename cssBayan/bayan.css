@@ -24,7 +24,7 @@
         letter-spacing: 0.01em;
     }
 
-    input[type=radio]:checked ~ .accord_item_image {
+    input[type=radio]:checked ~ label .accord_item_image{
         height: 20em;
     }
 
@@ -58,7 +58,7 @@
         height: 1.9em;
     }
 
-    input[type=radio]:checked ~ .accord_item_image {
+    input[type=radio]:checked ~ label .accord_item_image {
         height: 23em;
     }
 
@@ -88,7 +88,7 @@
         height: 2em;
     }
 
-    input[type=radio]:checked ~ .accord_item_image {
+    input[type=radio]:checked ~ label .accord_item_image {
         height: 25em;
     }
 
@@ -104,11 +104,11 @@
         stroke: #fff893;
     }
 
-    input[type=radio]:hover ~ .accord_item_image {
+    input[type=radio]:hover ~ label .accord_item_image {
         height: 25em;
     }
 
-    input[type=radio]:hover ~ .accord_item_label .plusOrCross {
+    input[type=radio]:hover ~ label .accord_item_label .plusOrCross {
         transform: rotate(45deg);
     }
 }
