@@ -108,7 +108,7 @@
         height: 25em;
     }
 
-    input[type=radio]:hover ~ label .accord_item_label .plusOrCross {
+    input[type=radio]:hover ~ .accord_item_label .item_head .plusOrCross {
         transform: rotate(45deg);
     }
 }
@@ -173,7 +173,7 @@ body {
     transition: transform 0.3s ease;
 }
 
-input[type=radio]:checked ~ .accord_item_label .plusOrCross {
+input[type=radio]:checked ~ .accord_item_label .item_head .plusOrCross {
     transform: rotate(45deg);
 }
 
@@ -192,4 +192,10 @@ p {
 h1 {
     color: #d2459a;
     text-shadow: 0.08em 0.08em black;
+}
+
+path {
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 2;
 }
