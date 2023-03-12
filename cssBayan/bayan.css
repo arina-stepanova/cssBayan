@@ -24,7 +24,7 @@
         letter-spacing: 0.01em;
     }
 
-    input[type=checkbox]:checked ~ .accord_item_image {
+    input[type=radio]:checked ~ .accord_item_image {
         height: 20em;
     }
 
@@ -58,7 +58,7 @@
         height: 1.9em;
     }
 
-    input[type=checkbox]:checked ~ .accord_item_image {
+    input[type=radio]:checked ~ .accord_item_image {
         height: 23em;
     }
 
