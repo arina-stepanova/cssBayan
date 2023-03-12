@@ -26,18 +26,22 @@
     }
 
     input[type=checkbox]:checked ~ .accord_item_image {
-        height: 190px;
+        height: 20em;
     }
 
     .plusOrCross {
         width: 1.1em;
+    }
+
+    .item_head {
+        height: 1.8em;
     }
 }
 
 @media screen and (min-width: 820px) {
     .wrapper {
         margin: 3% auto;
-        max-width: 40%;
+        max-width: 70%;
     }
 
     p {
@@ -51,10 +55,12 @@
         letter-spacing: 0.03em;
     }
 
-    input[type=checkbox]:checked ~ .accord_item_image,
-    input[type=checkbox]:hover ~ .accord_item_image {
-        /* эта строка отрабатывает правильно на МОЕМ desktop, но ее не должно быть в медиа запросе для планшета */
-        height: 200px;
+    .item_head {
+        height: 1.9em;
+    }
+
+    input[type=checkbox]:checked ~ .accord_item_image {
+        height: 23em;
     }
 
     .plusOrCross {
@@ -62,10 +68,10 @@
     }
 }
 
-@media screen and (min-width: 1920px) {
+@media screen and (min-width: 1280px) {
     .wrapper {
         margin: 5% auto;
-        max-width: 55%;
+        max-width: 60%;
     }
 
     p {
@@ -79,13 +85,23 @@
         letter-spacing: 0.05em;
     }
 
+    .item_head {
+        height: 2em;
+    }
+
     input[type=checkbox]:checked ~ .accord_item_image,
     input[type=checkbox]:hover ~ .accord_item_image {
-        height: 250px;
+        height: 25em;
     }
 
     .plusOrCross {
         width: 1.5em;
+    }
+
+    .accordion:hover .item_head p,
+    .accordion:hover .item_head svg {
+        color: #fff893;
+        stroke: #fff893;
     }
 }
 
@@ -101,12 +117,6 @@ body {
 
 .accordion {
     box-shadow: #d2459a 10px 10px 0 0 ;
-}
-
-.accordion:hover .item_head p,
-.accordion:hover .item_head svg {
-    color: #fff893;
-    stroke: #fff893;
 }
 
 .accord_item {
@@ -138,7 +148,6 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 30px;
     cursor: pointer;
     background-color: #ed6eba;
     border: #ed6eba solid 1px;
