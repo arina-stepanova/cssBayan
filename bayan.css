@@ -13,12 +13,52 @@
         margin: 2% auto;
         max-width: 90%;
     }
+
+    p {
+        font-size: 1.1em;
+        margin: 0;
+        letter-spacing: 0.05em;
+    }
+
+    h1 {
+        font-size: 1.8em;
+        letter-spacing: 0.01em;
+    }
+
+    input[type=checkbox]:checked ~ .accord_item_image {
+        height: 190px;
+    }
+
+    .plusOrCross {
+        width: 1.1em;
+    }
 }
 
 @media screen and (min-width: 820px) {
     .wrapper {
         margin: 3% auto;
-        max-width: 70%;
+        max-width: 40%;
+    }
+
+    p {
+        font-size: 1.25em;
+        margin: 0;
+        letter-spacing: 0.06em;
+    }
+
+    h1 {
+        font-size: 2em;
+        letter-spacing: 0.03em;
+    }
+
+    input[type=checkbox]:checked ~ .accord_item_image,
+    input[type=checkbox]:hover ~ .accord_item_image {
+        /* эта строка отрабатывает правильно на МОЕМ desktop, но ее не должно быть в медиа запросе для планшета */
+        height: 200px;
+    }
+
+    .plusOrCross {
+        width: 1.25em;
     }
 }
 
@@ -26,6 +66,26 @@
     .wrapper {
         margin: 5% auto;
         max-width: 55%;
+    }
+
+    p {
+        font-size: 1.5em;
+        margin: 0;
+        letter-spacing: 0.07em;
+    }
+
+    h1 {
+        font-size: 2.4em;
+        letter-spacing: 0.05em;
+    }
+
+    input[type=checkbox]:checked ~ .accord_item_image,
+    input[type=checkbox]:hover ~ .accord_item_image {
+        height: 250px;
+    }
+
+    .plusOrCross {
+        width: 1.5em;
     }
 }
 
@@ -45,20 +105,12 @@ body {
 
 .accordion:hover .item_head p,
 .accordion:hover .item_head svg {
-    color: #95caef;
-    stroke: #95caef;
+    color: #fff893;
+    stroke: #fff893;
 }
 
 .accord_item {
-    position: relative;
     cursor: pointer;
-}
-
-.accord_item_input {
-    position: absolute;
-    top: 0;
-    right: 0;
-    opacity: 0;
 }
 
 .accord_item_image img {
@@ -72,15 +124,10 @@ body {
 }
 
 .accord_item_image {
-    height: 0px;
+    height: 0;
     overflow: hidden;
-    transition: height 0.4s ease-in;
+    transition: height 0.5s ease-in-out;
     background-color: rgb(254, 248, 252);
-}
-
-input[type=checkbox]:checked ~ .accord_item_image,
-input[type=checkbox]:hover ~ .accord_item_image {
-    height: 250px;
 }
 
 .item_head {
@@ -99,8 +146,9 @@ input[type=checkbox]:hover ~ .accord_item_image {
 }
 
 .plusOrCross {
-    width: 1.6em;
-    stroke: #fff893;
+    /* width: 1.6em; */
+    stroke: #000000;
+    transition: transform 0.3s ease;
 }
 
 input[type=checkbox]:checked ~ .accord_item_label .plusOrCross,
@@ -108,16 +156,25 @@ input[type=checkbox]:hover ~ .accord_item_label .plusOrCross {
     transform: rotate(45deg);
 }
 
+input[type=checkbox]:active ~ .accord_item_label .plusOrCross,
+input[type=checkbox]:active ~ .accord_item_label .item_head p {
+    color: #47fe66;
+    stroke: #47fe66;
+}
+
 p {
-    font-size: 1.5em;
+    /* font-size: 1.5em; */
     margin: 0;
-    letter-spacing: 0.05em;
-    color: #fff893;
+    /* letter-spacing: 0.05em; */
+    color: #95caef;
+    text-shadow: rgb(0, 0, 0) 1px 2px;
 }
 
 h1 {
-    font-size: 2em;
-    letter-spacing: 0.01em;
+    /* font-size: 2em; */
+    /* letter-spacing: 0.01em; */
     color: #d2459a;
+    text-shadow: rgb(0, 0, 0) 1px 2px;
 }
+
 
